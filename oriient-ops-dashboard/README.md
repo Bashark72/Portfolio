@@ -10,12 +10,12 @@
 
 ## The problem
 
-Oriient is an indoor-positioning SaaS company. Before a customer site can use the product, a field mapper walks the site to map it, and a supervisor from the operations team oversees the session. Every day the mapping operations team has to:
+Oriient is an indoor-positioning company. Its operations team works through a daily list of scheduled jobs ("maps"), each overseen by one supervisor. Supervisors start their shifts at different times, so every day the team has to:
 
-- split the day's mapping sessions ("maps") between the supervisors on shift, whose start times differ,
-- avoid giving a supervisor a map that starts before their shift does,
-- spread new mappers across supervisors so nobody is overloaded,
-- track each map until it's completed, partly completed or cancelled, and see how long mapping takes.
+split the day's maps between the supervisors on shift,
+make sure no supervisor gets a map that starts before their shift does,
+spread maps with new team members evenly so no supervisor is overloaded,
+track each map until it's completed, partly completed or cancelled, and see how long maps take.
 
 ## What I built
 
