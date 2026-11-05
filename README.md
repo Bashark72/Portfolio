@@ -58,8 +58,24 @@ A business running SAP B1 was exporting invoice PDFs manually and sending each o
 
 ---
 
+### 4. Tsevet: AI Teammates for Small Businesses
+**Status:** working and in use by me, no paying clients yet · **Role:** founder and sole developer
+
+Small business owners in Israel do their own follow-ups, quotes, posts and reminders, usually in Hebrew or Arabic. Tsevet gives them a team of named AI workers, each with a face and a job, in a Hebrew-first, right-to-left web chat. Workers hand tasks to each other, run recurring jobs and connect to Gmail, Calendar and Sheets. Nothing goes out until the owner approves it on a card.
+
+- Multi-agent team: any worker can hand a task to any teammate, and the work continues on the server with the app closed
+- Approval enforced by the server: workers hold no sending credentials, and the owner approves the exact recipient and text
+- One isolated service and volume per client, tested with a second real client
+- A shared memory the owner can read and delete, plus recurring jobs and a monthly usage cap
+
+**Stack:** TypeScript · Next.js · React · Supabase (Postgres, Auth) · Python · Docker · Railway · MCP · a self-hosted agent runtime · a hosted LLM
+
+→ [Full write-up, architecture and screenshots](./tsevet-ai-teammates/)
+
+---
+
 ## Contact
 
 bashar.uni1@gmail.com · [linkedin.com/in/bashar-kassum1](https://linkedin.com/in/bashar-kassum1)
 
-Source code for the invoice intake system is private (it's a commercial product); happy to walk through it on a call.
+Source code for the invoice intake system and Tsevet is private (both are commercial products); happy to walk through either on a call.
