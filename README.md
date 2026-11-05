@@ -10,7 +10,23 @@ Each project below has its own folder with a full write-up (problem → what I b
 
 ## Projects
 
-### 1. AI Invoice Intake for SAP Business One
+### 1. Tsevet: AI Teammates for Small Businesses
+**Status:** working and in use by me, no paying clients yet · **Role:** founder and sole developer
+
+Small business owners in Israel do their own follow-ups, quotes, posts and reminders, usually in Hebrew or Arabic. Tsevet gives them a team of named AI workers, each with a face and a job, in a Hebrew-first, right-to-left web chat. Workers hand tasks to each other, run recurring jobs and connect to Gmail, Calendar and Sheets. Nothing goes out until the owner approves it on a card.
+
+- Multi-agent team: any worker can hand a task to any teammate, and the work continues on the server with the app closed
+- Approval enforced by the server: workers hold no sending credentials, and the owner approves the exact recipient and text
+- One isolated service and volume per client, tested with a second real client
+- A shared memory the owner can read and delete, plus recurring jobs and a monthly usage cap
+
+**Stack:** TypeScript · Next.js · React · Supabase (Postgres, Auth) · Python · Docker · Railway · MCP · a self-hosted agent runtime · a hosted LLM
+
+→ [Full write-up, architecture and screenshots](./tsevet-ai-teammates/)
+
+---
+
+### 2. AI Invoice Intake for SAP Business One
 **Status:** in development, tested on a first customer's real invoices, with an SAP integrator partner · **Role:** sole developer, end to end
 
 Supplier invoices arrive as Hebrew PDFs and someone types them into SAP by hand. This multi-tenant SaaS extracts the invoice data with Claude, validates it the way an accountant would, matches the supplier to the company's SAP supplier list, and sends anything uncertain to a human review screen. Approved invoices go to the SAP integrator as a versioned JSON/XML contract, and the integrator creates the A/P invoice drafts in SAP B1.
@@ -26,7 +42,7 @@ Supplier invoices arrive as Hebrew PDFs and someone types them into SAP by hand.
 
 ---
 
-### 2. Maps Board: Shift Assignment Dashboard (Oriient)
+### 3. Maps Board: Shift Assignment Dashboard (Oriient)
 **Status:** deployed internally, handed over to Product · **Role:** self-initiated, designed and built solo
 
 Every day, the mapping operations team at an indoor-positioning SaaS company has to split that day's site-mapping sessions between supervisors whose shifts start at different times, then track each session until it's done. I built the internal web app the team uses to plan and track the day.
@@ -42,7 +58,7 @@ Every day, the mapping operations team at an indoor-positioning SaaS company has
 
 ---
 
-### 3. WhatsApp Invoice Delivery Bot for SAP Business One
+### 4. WhatsApp Invoice Delivery Bot for SAP Business One
 **Status:** in production · **Role:** sole developer
 
 A business running SAP B1 was exporting invoice PDFs manually and sending each one to customers over WhatsApp. Now a message like "invoice 1042 for customer X" to a bot pulls the right invoice from SAP and delivers it to the customer on WhatsApp.
@@ -55,22 +71,6 @@ A business running SAP B1 was exporting invoice PDFs manually and sending each o
 **Stack:** n8n · WhatsApp Business API · SAP B1 Service Layer · Docker
 
 → [Full write-up and sanitized workflow](./whatsapp-invoice-bot/)
-
----
-
-### 4. Tsevet: AI Teammates for Small Businesses
-**Status:** working and in use by me, no paying clients yet · **Role:** founder and sole developer
-
-Small business owners in Israel do their own follow-ups, quotes, posts and reminders, usually in Hebrew or Arabic. Tsevet gives them a team of named AI workers, each with a face and a job, in a Hebrew-first, right-to-left web chat. Workers hand tasks to each other, run recurring jobs and connect to Gmail, Calendar and Sheets. Nothing goes out until the owner approves it on a card.
-
-- Multi-agent team: any worker can hand a task to any teammate, and the work continues on the server with the app closed
-- Approval enforced by the server: workers hold no sending credentials, and the owner approves the exact recipient and text
-- One isolated service and volume per client, tested with a second real client
-- A shared memory the owner can read and delete, plus recurring jobs and a monthly usage cap
-
-**Stack:** TypeScript · Next.js · React · Supabase (Postgres, Auth) · Python · Docker · Railway · MCP · a self-hosted agent runtime · a hosted LLM
-
-→ [Full write-up, architecture and screenshots](./tsevet-ai-teammates/)
 
 ---
 
